@@ -336,3 +336,47 @@ Processing by TweeetsController#index as HTML
 Completed 200 OK in 1986ms (Views: 1983.1ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/" for 127.0.0.1 at 2020-06-28 00:00:41 +0300
+Processing by TweeetsController#index as HTML
+  Rendering tweeets/index.html.erb within layouts/application
+  [1m[36mTweeet Load (0.4ms)[0m  [1m[34mSELECT  "tweeets".* FROM "tweeets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/views/tweeets/index.html.erb:4
+  [1m[36mCACHE Tweeet Load (0.0ms)[0m  [1m[34mSELECT  "tweeets".* FROM "tweeets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/views/tweeets/index.html.erb:4
+  [1m[36mCACHE Tweeet Load (0.0ms)[0m  [1m[34mSELECT  "tweeets".* FROM "tweeets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/views/tweeets/index.html.erb:4
+  [1m[36mCACHE Tweeet Load (0.0ms)[0m  [1m[34mSELECT  "tweeets".* FROM "tweeets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/views/tweeets/index.html.erb:4
+  [1m[36mCACHE Tweeet Load (0.0ms)[0m  [1m[34mSELECT  "tweeets".* FROM "tweeets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/views/tweeets/index.html.erb:4
+  [1m[36mCACHE Tweeet Load (0.0ms)[0m  [1m[34mSELECT  "tweeets".* FROM "tweeets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/views/tweeets/index.html.erb:4
+  [1m[36mCACHE Tweeet Load (0.0ms)[0m  [1m[34mSELECT  "tweeets".* FROM "tweeets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/views/tweeets/index.html.erb:4
+  [1m[36mCACHE Tweeet Load (0.0ms)[0m  [1m[34mSELECT  "tweeets".* FROM "tweeets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/views/tweeets/index.html.erb:4
+  Rendered tweeets/_feed.html.erb (524.7ms)
+  Rendered tweeets/index.html.erb within layouts/application (525.9ms)
+Completed 500 Internal Server Error in 536ms (ActiveRecord: 2.0ms)
+
+
+
+ActionView::Template::Error - undefined local variable or method `tweeets' for #<#<Class:0x00007ff59801ae60>:0x00007ff5980185e8>
+Did you mean?  @tweeets:
+  app/views/tweeets/_feed.html.erb:14:in `view template'
+  app/views/tweeets/_feed.html.erb:14:in `_app_views_tweeets__feed_html_erb__3119036288454857511_70346229266140'
+  app/views/tweeets/index.html.erb:4:in `_app_views_tweeets_index_html_erb___410756649578568756_70346396982200'
+
+Started POST "/__better_errors/20f3d1b27d2260e8/variables" for 127.0.0.1 at 2020-06-28 00:00:42 +0300
+  [1m[36mTweeet Load (0.3ms)[0m  [1m[34mSELECT  "tweeets".* FROM "tweeets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Started GET "/" for 127.0.0.1 at 2020-06-28 00:01:04 +0300
+Processing by TweeetsController#index as HTML
+  Rendering tweeets/index.html.erb within layouts/application
+  [1m[36mTweeet Load (0.4ms)[0m  [1m[34mSELECT "tweeets".* FROM "tweeets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweeets/_feed.html.erb:14
+  Rendered tweeets/_feed.html.erb (3.0ms)
+  Rendered tweeets/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 1833ms (Views: 1828.5ms | ActiveRecord: 0.4ms)
+
+
