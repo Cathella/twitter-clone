@@ -226,3 +226,113 @@ Processing by TweeetsController#index as HTML
 Completed 200 OK in 3317ms (Views: 3304.6ms | ActiveRecord: 2.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2020-06-26 22:54:26 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by TweeetsController#index as HTML
+  Rendering tweeets/index.html.erb within layouts/application
+  [1m[36mTweeet Load (0.2ms)[0m  [1m[34mSELECT "tweeets".* FROM "tweeets"[0m
+  ↳ app/views/tweeets/index.html.erb:14
+  Rendered tweeets/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 291ms (Views: 283.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/tweeets/1" for 127.0.0.1 at 2020-06-27 01:26:43 +0300
+Processing by TweeetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTweeet Load (0.4ms)[0m  [1m[34mSELECT  "tweeets".* FROM "tweeets" WHERE "tweeets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tweeets_controller.rb:67
+  Rendering tweeets/show.html.erb within layouts/application
+  Rendered tweeets/show.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.4ms)
+
+
+
+SyntaxError - syntax error, unexpected '<', expecting end
+            </p>
+            ^
+/home/nakitto/odin_on_rails/twitter-clone/app/views/layouts/application.html.erb:41: unknown regexp options - dv
+/home/nakitto/odin_on_rails/twitter-clone/app/views/layouts/application.html.erb:42: syntax error, unexpected '<'
+        </div>
+        ^
+/home/nakitto/odin_on_rails/twitter-clone/app/views/layouts/application.html.erb:43: unknown regexp options - dv
+/home/nakitto/odin_on_rails/twitter-clone/app/views/layouts/application.html.erb:44: syntax error, unexpected '<'
+    </nav>
+    ^
+/home/nakitto/odin_on_rails/twitter-clone/app/views/layouts/application.html.erb:47: unknown regexp options - bdy
+/home/nakitto/odin_on_rails/twitter-clone/app/views/layouts/application.html.erb:48: syntax error, unexpected '<'
+</html>
+^
+/home/nakitto/odin_on_rails/twitter-clone/app/views/layouts/application.html.erb:53: unterminated regexp meets end of file
+          end
+              ^
+/home/nakitto/odin_on_rails/twitter-clone/app/views/layouts/application.html.erb:53: syntax error, unexpected end-of-input, expecting end:
+  app/views/layouts/application.html.erb:40:in `'
+
+Started POST "/__better_errors/9bd52c25fbf89a0c/variables" for 127.0.0.1 at 2020-06-27 01:26:43 +0300
+Started GET "/" for 127.0.0.1 at 2020-06-27 01:26:47 +0300
+Processing by TweeetsController#index as HTML
+  Rendering tweeets/index.html.erb within layouts/application
+  [1m[36mTweeet Load (0.3ms)[0m  [1m[34mSELECT "tweeets".* FROM "tweeets"[0m
+  ↳ app/views/tweeets/index.html.erb:14
+  Rendered tweeets/index.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+
+
+SyntaxError - syntax error, unexpected '<', expecting end
+            </p>
+            ^
+/home/nakitto/odin_on_rails/twitter-clone/app/views/layouts/application.html.erb:41: unknown regexp options - dv
+/home/nakitto/odin_on_rails/twitter-clone/app/views/layouts/application.html.erb:42: syntax error, unexpected '<'
+        </div>
+        ^
+/home/nakitto/odin_on_rails/twitter-clone/app/views/layouts/application.html.erb:43: unknown regexp options - dv
+/home/nakitto/odin_on_rails/twitter-clone/app/views/layouts/application.html.erb:44: syntax error, unexpected '<'
+    </nav>
+    ^
+/home/nakitto/odin_on_rails/twitter-clone/app/views/layouts/application.html.erb:47: unknown regexp options - bdy
+/home/nakitto/odin_on_rails/twitter-clone/app/views/layouts/application.html.erb:48: syntax error, unexpected '<'
+</html>
+^
+/home/nakitto/odin_on_rails/twitter-clone/app/views/layouts/application.html.erb:53: unterminated regexp meets end of file
+          end
+              ^
+/home/nakitto/odin_on_rails/twitter-clone/app/views/layouts/application.html.erb:53: syntax error, unexpected end-of-input, expecting end:
+  app/views/layouts/application.html.erb:40:in `'
+
+Started POST "/__better_errors/e019e9d4d867c6b5/variables" for 127.0.0.1 at 2020-06-27 01:26:47 +0300
+Started GET "/" for 127.0.0.1 at 2020-06-27 21:27:06 +0300
+Processing by TweeetsController#index as HTML
+  Rendering tweeets/index.html.erb within layouts/application
+  [1m[36mTweeet Load (0.5ms)[0m  [1m[34mSELECT "tweeets".* FROM "tweeets"[0m
+  ↳ app/views/tweeets/index.html.erb:14
+  Rendered tweeets/index.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 552ms (ActiveRecord: 0.5ms)
+
+
+
+ActionView::Template::Error - undefined local variable or method `new_tweet_path' for #<#<Class:0x00007ff5948aa340>:0x00007ff5962f4188>
+Did you mean?  new_tweeet_path:
+  app/views/layouts/application.html.erb:39:in `view template'
+  app/views/layouts/application.html.erb:39:in `_app_views_layouts_application_html_erb__3584264599325882406_70346381771000'
+
+Started POST "/__better_errors/59e06a4f187eba8b/variables" for 127.0.0.1 at 2020-06-27 21:27:06 +0300
+Started GET "/" for 127.0.0.1 at 2020-06-27 21:27:55 +0300
+Processing by TweeetsController#index as HTML
+  Rendering tweeets/index.html.erb within layouts/application
+  [1m[36mTweeet Load (0.1ms)[0m  [1m[34mSELECT "tweeets".* FROM "tweeets"[0m
+  ↳ app/views/tweeets/index.html.erb:14
+  Rendered tweeets/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 54ms (Views: 51.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-27 22:28:54 +0300
+Processing by TweeetsController#index as HTML
+  Rendering tweeets/index.html.erb within layouts/application
+  [1m[36mTweeet Load (0.5ms)[0m  [1m[34mSELECT "tweeets".* FROM "tweeets"[0m
+  ↳ app/views/tweeets/index.html.erb:14
+  Rendered tweeets/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 1986ms (Views: 1983.1ms | ActiveRecord: 0.5ms)
+
+
